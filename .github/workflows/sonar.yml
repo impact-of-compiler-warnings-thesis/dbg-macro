@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir build 
           cd build 
-          cmake .. -GNinja -DCMAKE_CXX_STANDARD=17 -CMAKE_BUILD_TYPE=Debug -DDBG_MACRO_ENABLE_TESTS=On
+          cmake .. -GNinja -DCMAKE_CXX_STANDARD=17 -DCMAKE_BUILD_TYPE=Debug -DDBG_MACRO_ENABLE_TESTS=On
       - name: Run build-wrapper
         run: |
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} ninja -C build
